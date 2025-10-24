@@ -23,6 +23,9 @@ pauseBtn.addEventListener('click', () => {
 // pause the timer and updating
 function pausingRunningTime() {
   console.log('pause button clicked')
+  clearInterval(timerIntervel)
+  updateTimer(currentTime)
+  isRunning = false
 }
 
 // running counter
@@ -30,7 +33,11 @@ function countDownTimer() {
   // enable the disbaled pause button
   pauseBtn.disabled = false
   // stop running unwanted clicks 
-  if (isRunning) return 
+  console.log(isRunning)
+  if (isRunning) {
+    return
+  }
+  console.log('button clicked or not')
   isRunning = true
   timerIntervel = setInterval(() => {
     if (currentTime > 0) {
