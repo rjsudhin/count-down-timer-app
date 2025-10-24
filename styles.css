@@ -1,3 +1,6 @@
+/* Badeen Font family */
+@import url('https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -21,15 +24,17 @@ body {
 }
 
 #container {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   .time-display {
-    font-size: 70px;
-    font-weight: bold;
+    font-family: 'Badeen Display';
+    font-size: 100px;
+
+    /* font-weight: bold; */
   }
 }
