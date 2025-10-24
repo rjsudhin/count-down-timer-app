@@ -4,7 +4,10 @@ let currentTime = timerDucation
 const timeDisplay = document.querySelector('.time-display')
 timeDisplay.textContent = '25 : 00'
 const startBtn = document.querySelector('.start-btn')
+const pauseBtn = document.querySelector('.pause-btn')
 
+// pause button disabled in default timer | first load
+pauseBtn.disabled = true
 let isRunning = false
 let timerIntervel = null
 
@@ -13,8 +16,19 @@ startBtn.addEventListener('click', (e) => {
   countDownTimer()
 })
 
+pauseBtn.addEventListener('click', () => {
+  pausingRunningTime()
+})
+
+// pause the timer and updating
+function pausingRunningTime() {
+  console.log('pause button clicked')
+}
+
 // running counter
 function countDownTimer() {
+  // enable the disbaled pause button
+  pauseBtn.disabled = false
   // stop running unwanted clicks 
   if (isRunning) return 
   isRunning = true
